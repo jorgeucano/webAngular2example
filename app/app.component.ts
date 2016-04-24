@@ -82,10 +82,10 @@ export class AppComponent  implements OnInit {
   title = "Tour of Heroes";
   heroes: Hero[];
   selectedHero : Hero;
-  onSelect(hero: Hero){ this.heroes = this._heroService.getHeroes(); }
+  onSelect(hero: Hero){ getHeroes() }
 
   getHeroes(){
-    this.heroes = this._heroService.getHeroes();
+    this._heroService.getHeroes().then(heroes => this.heroes = heroes);
   }
 
 }
