@@ -21,6 +21,7 @@ var HEROES: Hero[] = [
 
 @Component({
     selector: 'my-app',
+    directives: [HeroDetailComponent],
     template: `
         <h1>{{title}}</h1>
         <h2>My Heroes</h2>
